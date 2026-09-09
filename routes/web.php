@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\Auth\LoginController;
 
+//SITE
+Route::get('/', [SiteController::class, 'index']);
 
-Route::get('/', [SiteController::class, 'index'])->name('index');
+//LOGIN
+Route::get('/login', [LoginController::class, 'index']);
