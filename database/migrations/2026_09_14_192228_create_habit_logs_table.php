@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignIdFor(Habit::class)->constrained()->cascadeOnDelete();
             $table->date('completed_at');
             $table->timestamps();
+            $table->unique(['habit_id', 'completed_at']);
         });
     }
 
